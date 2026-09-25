@@ -2,9 +2,9 @@
 public class Professor extends Colaborador{
     private String curso;
     private int qtdAulas;
-    private int horaAula;
+    private double horaAula;
     
-    public Professor(String nome, String rg, int qtdFilhos, String curso, int qtdAulas, int horaAula){
+    public Professor(String nome, String rg, int qtdFilhos, String curso, double horaAula){
         super (nome, rg,qtdFilhos);
         this.curso = curso;
         this.qtdAulas = 0;
@@ -33,13 +33,13 @@ public class Professor extends Colaborador{
     }*/
     
     
-    public void registraAulas(int Qtd){
-        qtdAulas += Qtd; 
+    public void registraAulas(int qtd){
+        qtdAulas += qtd; 
     }
 
     @Override
     public double calcularSalario() {
-        return (getQtdAulas()*getHoraAula()) + (auxilioProcriação*qtdFilhos);
+        return (getQtdAulas()*getHoraAula()) + (getAuxilioProcriacao()*getQtdFilhos());
     }
 
     @Override

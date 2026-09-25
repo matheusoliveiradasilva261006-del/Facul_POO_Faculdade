@@ -1,7 +1,7 @@
 
 public class Funcionario extends Colaborador{
     private String departamento;
-    private int valeCoxinha = 42;
+    private double valeCoxinha = 42;
     private double salarioFixo;
     private int faltas = 0;
 
@@ -18,10 +18,10 @@ public class Funcionario extends Colaborador{
         this.departamento = departamento;
     }*/
 
-    public int getValeCoxinha() {
+    public double getValeCoxinha() {
         return valeCoxinha;
     }
-    /*public void setValeCoxinha(int valeCoxinha) {
+    /*public void setValeCoxinha(double valeCoxinha) {
         this.valeCoxinha = valeCoxinha;
     }*/
 
@@ -45,7 +45,7 @@ public class Funcionario extends Colaborador{
 
     @Override
     public double calcularSalario() {
-        return (getSalarioFixo() + valeCoxinha + (auxilioProcriação*qtdFilhos) -((getSalarioFixo()/20)*getFaltas()));
+        return (getSalarioFixo() + valeCoxinha + (getAuxilioProcriacao()*getQtdFilhos()) -((getSalarioFixo()/20)*getFaltas()));
     }
 
     @Override

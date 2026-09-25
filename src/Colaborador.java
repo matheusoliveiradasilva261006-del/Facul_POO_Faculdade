@@ -1,10 +1,18 @@
 
 public abstract class Colaborador {
-    protected String nome;
-    protected String rg;
-    protected int qtdFilhos;
-    protected double auxilioProcriação = 100;
+    private String nome;
+    private String rg;
+    private int qtdFilhos;
+    private final double auxilioProcriacao = 100;
     
+    public double getAuxilioProcriacao() {
+        return auxilioProcriacao;
+    }
+
+    /*public void setAuxilioProcriacao(double auxilioProcriacao) {
+        this.auxilioProcriacao = auxilioProcriacao;
+    }*/
+
     public Colaborador(String nome, String rg, int qtdFilhos){
         this.nome = nome;
         this.rg = rg;
